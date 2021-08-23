@@ -32,3 +32,12 @@ for(var i=0, i < questions.length; i++) {
     }
 }
 alert("You got " + score + "/" + questions.length);
+
+
+
+// Add event listener to generate button
+// generateBtn.addEventListener("click", startQuiz);
+// Add event listener to generate button
+// generateBtn.addEventListener("click", answer);
+// Add event listener to generate button
+// generateBtn.addEventListener("click", highScores);
