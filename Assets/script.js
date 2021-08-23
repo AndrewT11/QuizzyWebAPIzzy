@@ -41,3 +41,19 @@ alert("You got " + score + "/" + questions.length);
 // generateBtn.addEventListener("click", answer);
 // Add event listener to generate button
 // generateBtn.addEventListener("click", highScores);
+
+
+// How to get max score.
+// const findMax = (numArr) => {
+//  // let maxNumber = 0;
+//   let maxNumber =numArr[0];
+
+//   for (let i = 0; i < numArr.length; i++) {
+//     const currentNum = numArr[i];
+
+//     if (currentNum > maxNumber) maxNumber = currentNum;
+//   }
+//   return maxNumber;
+// }
+
+// //because maxNumber starts at 0, zero is the highest number
