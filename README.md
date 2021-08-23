@@ -56,7 +56,7 @@ Andrew Tran
 * https://choosealicense.com/
 * https://www.youtube.com/watch?v=LQGTb112N_c
 * https://www.youtube.com/watch?v=riDzcEQbX6k
-<!--* https://www.youtube.com/watch?v=1Rq_LrpcgIM -->
+* https://www.youtube.com/watch?v=f4fB9Xg2JEY
 
 
 ### License
