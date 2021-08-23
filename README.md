@@ -55,8 +55,9 @@ Andrew Tran
 * https://developer.mozilla.org/en-US/
 * https://choosealicense.com/
 * https://www.youtube.com/watch?v=LQGTb112N_c
-* https://www.youtube.com/watch?v=riDzcEQbX6k
 * https://www.youtube.com/watch?v=f4fB9Xg2JEY
+* https://www.youtube.com/watch?v=riDzcEQbX6k
+
 
 
 ### License
