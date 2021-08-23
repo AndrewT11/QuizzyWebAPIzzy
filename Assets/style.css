@@ -1,25 +1,26 @@
 :root {
     --neutral: white;
-    --correct: red;
-    --wring: green;
+    --correct: green;
+    --wrong: red;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+ 
 body {
-    --color: var(--color-neutral);
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     width: 100vw;
-    height: 1000vh;
+    height: 100vh;
+   
 
-}
+} 
 
 body.correct {
     background-color: var(--correct);
