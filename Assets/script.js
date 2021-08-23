@@ -2,7 +2,7 @@
 // prompts created. We don't want prompts. Will have to figure this out.
 var questions = [
     {
-    prompt: "Which dinosaur is the king of the dinosaurs?\n(a) T-Rex\n(b) Triceratops\n(c)Steggosaurus\ (d) None of the above",
+    prompt: "Which dinosaur is the king of the dinosaurs?\n(a) T-Rex\n(b) Triceratops\n(c)Steggosaurus\(d) None of the above",
     answer: "a"
 
 },
