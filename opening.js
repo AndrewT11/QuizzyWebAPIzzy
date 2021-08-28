@@ -1,8 +1,9 @@
 //declaring variables
 
 var score = 0;
-var secondsLeft = 50;
-var incorrect = 10;
+var secondsLeft = 60;
+var penalty = 10;
+var questionIndex = 0;
 
 //declaring variable selectors
 var currentTime = document.querySelector("#currentTime");
@@ -45,9 +46,19 @@ var questions = [
 
 var createUl = document.createElement("ul"); //creates ul for questions
 
+var timerInterval = 0;
+//Timer will start and display time.
 timer.addEventListener("click", function(){
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        currentTime.textContent = "Time: " + secondsLeft;
+    if (timerInterval === 0) {
+        timerInterval = setInterval(function() {
+            secondsLeft--;
+            currentTime.textContent = "Time: + secondsLeft";
+        
+            if (secondsLeft <= 0) {
+                clearInterval(timerInterval);
+                allDone();
+                currentTime.textContent = "Game Over!"
+            };
+        }, 1000);    
     }
 });
