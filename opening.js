@@ -1,7 +1,8 @@
 //declaring variables
 
 var score = 0;
-
+var secondsLeft = 50;
+var incorrect = 10;
 
 //declaring variable selectors
 var currentTime = document.querySelector("#currentTime");
@@ -40,5 +41,13 @@ var questions = [
         options: ["JavaScript", "terminal / bash", "console.log", "for loops"],
         answer: "console.log"
 
+    }];
+
+var createUl = document.createElement("ul"); //creates ul for questions
+
+timer.addEventListener("click", function(){
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        currentTime.textContent = "Time: " + secondsLeft;
     }
-];
+});
