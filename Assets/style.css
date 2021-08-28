@@ -16,10 +16,21 @@
     float: right;
 }
 
-.btn {
+#clearHighScores {
     background-color: rgb(114, 73, 114);
     color: white;
     border: none;
     border-radius: 3px;
+    position: relative;
+    text-align: center;
+}
+
+#goBack {
+    background-color: rgb(114, 73, 114);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
     
 }
