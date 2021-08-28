@@ -16,8 +16,13 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 10%;
+    padding: 20%;
+    font-weight: bolder;
     
+}
+
+.welcomeInfo h1 {
+    font-weight: bolder;
 }
 
 .btn {
@@ -25,4 +30,5 @@
     color: white;
     border: none;
     border-radius: 3px;
+    
 }
