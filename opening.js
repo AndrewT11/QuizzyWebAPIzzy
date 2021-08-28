@@ -1,13 +1,14 @@
-//creating questions array
+//declaring variables
 
 var score = 0;
 
 
-//Selectors
+//declaring variable selectors
 var currentTime = document.querySelector("#currentTime");
 var questionBox = document.querySelector("#questionBox");
 var timer = document.querySelector("#timeStart");
 
+//creating questions array
 //Question Array to be populated
 var questions = [
     {
