@@ -1,28 +1,19 @@
-/* .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-}
+#container {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    border: 5px solid black;
+    width: 500px;
+    height: 500px;
+} 
 
-
-
-.welcomeInfo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 20%;
-    font-weight: bolder;
+#questionBox {
+    margin: 20px;
     
 }
 
-.welcomeInfo h1 {
-    font-weight: bolder;
+#currentTime {
+    float: right;
 }
 
 .btn {
