@@ -2,10 +2,15 @@
     position: absolute;
     left: 30%;
     top: 20%;
-    border: 5px solid black;
     width: 500px;
     height: 500px;
 } 
+
+#timeStart {
+    background-color: rgb(114, 73, 114);
+    color: white;
+    font-size: 20px;
+}
 
 #questionBox {
     margin: 20px;
@@ -17,6 +22,7 @@
 }
 
 #clearHighScores {
+    position: relative;
     background-color: rgb(114, 73, 114);
     color: white;
     border: none;
