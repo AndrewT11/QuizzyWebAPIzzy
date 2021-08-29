@@ -53,7 +53,7 @@ timer.addEventListener("click", function(){
         timerInterval = setInterval(function() {
             secondsLeft--;
             currentTime.textContent = "Time: "+ secondsLeft;
-        
+            //when time is up, game is done.
             if (secondsLeft <= 0) {
                 clearInterval(timerInterval);
                 finished();
@@ -75,12 +75,33 @@ function render(questionIndex) {
         var userChoices = questions[questionIndex].choices;
         questionsBox.textContent - userQuestion;
         }
+    //create ul and li for choices
     userChoices.forEach(function(newItem) { 
         var createLi = document.createElement("li");
         createLi.textContent = newItem;
         questionBox.appendChild(createUl);
         createUl.appendChild(createLi);
-        createLi.addEventListener("click", )
+        createLi.addEventListener("click", compare());
+        }
+    );
+};   
+
+function compare(event) {
+    var selection = event.target;
+
+    if (selection.matches("li")) {
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+            //if answer choice correct
+        if(selection.textContent == questions[questionIndex].answer) {
+            score++;
+            createDiv.textContent = "Letsa Go! You are right!" 
+        }   //if answer choice wrong
+            else {
+                secondsLeft = secondsLeft - penalty;
+                createDiv.textContent = "SMH. SHAKING MY DAMN HEAD."
+            }
     }
-    )
-}   
+
+    questionIndex++; //on to next question.
+}
