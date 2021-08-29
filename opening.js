@@ -15,31 +15,31 @@ var timer = document.querySelector("#timeStart");
 var questions = [
     {
         question: "Commonly used data types DO NOT include:",
-        options:  ["strings", "booleans", "alerts", "numbers"],
+        choices:  ["strings", "booleans", "alerts", "numbers"],
         answer: "alerts"
 
     },
     {
         question: "The condition in an if / else statement is enclosed within ______.",
-        options: ["quotes", "curly braces", "parentheses", "square brackets"],
+        choices: ["quotes", "curly braces", "parentheses", "square brackets"],
         answer: "brackets"
 
     },
     {
         question: "Arrays in JavaScript can be used to store ______.",
-        options: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
         answer: "all of the above"
 
     },
     {
         question: "String values must be enclosed within ______ when being assigned to variables.",
-        options: ["quotes", "curly braces", "parentheses", "commas"],
+        choices: ["quotes", "curly braces", "parentheses", "commas"],
         answer: "parenthesis"
 
     },
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        options: ["JavaScript", "terminal / bash", "console.log", "for loops"],
+        choices: ["JavaScript", "terminal / bash", "console.log", "for loops"],
         answer: "console.log"
 
     }];
@@ -60,11 +60,20 @@ timer.addEventListener("click", function(){
                 currentTime.textContent = "Game Over!"
             };
         }, 1000);    
-    }
+    };
+    render(questionIndex);
 });
 
 //Questions and answers rendered on page
 function render(questionIndex) {
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
+
+    //creating for loop to access array questions
+    for (var i = 0; i < questions.length; i++) {
+        var userQuestion = questions[questionsIndex].questions;
+        var userChoices = questions[questionsIndex].choices;
+        questionsBox.textContent - userQuestion;
+    }
+
 }
