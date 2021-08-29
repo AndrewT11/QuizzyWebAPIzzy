@@ -65,14 +65,22 @@ timer.addEventListener("click", function(){
 });
 
 //Questions and answers rendered on page
-function render(questionsIndex) {
-    questionsDiv.innerHTML = "";
+function render(questionIndex) {
+    questionBox.innerHTML = "";
     ulCreate.innerHTML = "";
 
     //creating for loop to access array questions
     for (var i = 0; i < questions.length; i++) {
-        var userQuestion = questions[questionsIndex].questions;
+        var userQuestion = questions[questionIndex].question;
+        var userChoices = questions[questionIndex].choices;
         questionsBox.textContent - userQuestion;
+        }
+    userChoices.forEach(function(newItem) { 
+        var createLi = document.createElement("li");
+        createLi.textContent = newItem;
+        questionBox.appendChild(createUl);
+        createUl.appendChild(createLi);
+        createLi.addEventListener("click", )
     }
-
+    )
 }   
