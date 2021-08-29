@@ -8,6 +8,8 @@
 
 #timeStart {
     background-color: rgb(114, 73, 114);
+    margin-left: 33%;
+    padding: 15px 30px;
     color: white;
     font-size: 20px;
 }
@@ -25,22 +27,45 @@
     position: relative;
     background-color: rgb(114, 73, 114);
     color: white;
-    border: none;
-    border-radius: 3px;
-    position: relative;
     text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    top: 30%;
+    right: 10%;
 }
 
 #goBack {
     background-color: rgb(114, 73, 114);
-    color: white;
-    border: none;
-    border-radius: 3px;
     position: relative;
+    padding: 10px;
+    top: 30%;
+    left: 55%;
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    width: auto;
     text-align: center;
     
 }
 
+h1 {
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+}
+
 #submit {
-    
+    background-color: rgb(114, 73, 114);
+    margin-left: 33%;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+}
+
+#createDiv {
+    margin-top: 20px;
+    border-top: 2px solid black;
 }

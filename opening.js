@@ -42,13 +42,14 @@ var questions = [
         choices: ["JavaScript", "terminal / bash", "console.log", "for loops"],
         answer: "console.log"
 
-    }];
+    }
+];
 
 var createUl = document.createElement("ul"); //creates ul for questions
 
 var timerInterval = 0;
 //Timer will start and display time.
-timer.addEventListener("click", function(){
+timer.addEventListener("click", function(){ 
     if (timerInterval === 0) {
         timerInterval = setInterval(function() {
             secondsLeft--;
@@ -61,19 +62,19 @@ timer.addEventListener("click", function(){
             };
         }, 1000);    
     };
-    render(questionIndex);
+    generate(questionIndex);
 });
 
-//Clear Data. Questions and answers rendered on page
-function render(questionIndex) {
+//Clear Data. Questions and answers generated on page
+function generate(questionIndex) {
     questionBox.innerHTML = "";
-    CreateUl.innerHTML = "";
+    createUl.innerHTML = "";
 
     //creating for loop to access array questions and answers
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].question;
         var userChoices = questions[questionIndex].choices;
-        questionBox.textContent - userQuestion;
+        questionBox.textContent = userQuestion;
         }
     //create ul and li for choices
     userChoices.forEach(function (newItem) { 
@@ -111,7 +112,7 @@ function compare(event) {
             createDiv.textContent = score + "/" + questions.length + ". See you at the crossroads. So you won't be lonely."
     } 
         else {
-        render(questionIndex);
+        generate(questionIndex);
     }
         questionBox.appendChild(createDiv);
 
