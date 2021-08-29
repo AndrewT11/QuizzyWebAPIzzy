@@ -135,11 +135,11 @@ function finished() {
 
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
-        var createP2 = documente.createElement("p");
+        var createP = documente.createElement("p");
         clearInterval(timeInterval);
         finalScoreP.textContent = "Final Score: " + timeRemaining;
 
-        questionBox.appendChild(createP2);
+        questionBox.appendChild(createP);
     }
     
     //Entering initials and submitting high score to high score list.
