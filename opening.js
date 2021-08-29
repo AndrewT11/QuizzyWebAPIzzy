@@ -115,7 +115,7 @@ function compare(event) {
         generate(questionIndex);
     }
     questionBox.appendChild(createDiv);
-
+};
 //Gme finished. Questionbox and timer cleared
 function finished() {
     questionBox.innerHTML = "";
@@ -127,7 +127,7 @@ function finished() {
     createH1.textContent = "Game over!"
 
     questionBox.appendChild(createH1);
-    
+
     var finalScoreP = document.createElement("p");
     finalScoreP.setAttribute("id", "finalScoreP");
 
@@ -141,7 +141,7 @@ function finished() {
 
         questionBox.appendChild(createP);
     }
-    
+
     //Entering initials and submitting high score to high score list.
     //creating label for input box
     var createLabel = document.createElement("label");
@@ -169,7 +169,7 @@ function finished() {
 
         var finalScore = {
             initials: initials,
-            score:  score
+            score:  timeRemaining
         };
         // storing and retrieving topScores from localStorage. Place into highScores.html 
         var topScores = localStorage.getItem("topScores");
@@ -185,7 +185,6 @@ function finished() {
             var setScore = JSON.stringify(topScores);
             localStorage.setItem("topScores", setScore);
             //Move to highScores page
-            window.location.replace("highScores.html")
-    })    
-
+            window.location.replace("highScores.html");
+    });    
 };
