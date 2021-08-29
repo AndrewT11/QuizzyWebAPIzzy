@@ -2,14 +2,8 @@
 
 
 //declaring selector variables
-var currenTime = document.querySelector("#currenTime");
-
-var question = document.querySelector("#question");
-
 var goBack = ducoment.querySelector("#goBack");
-
 var clearHighScores = document.querySelector("#clearHighScores")
-
 var highScores = document.querySelector("#highScores");
 
 //Event Listeners for two buttons on High Score page
@@ -22,3 +16,15 @@ clearHighScores.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
 });
+
+var allScores = localStorage.getItem("allScores");
+allScores = JSON.parse(allScores);
+
+//lists new top score to high score list
+if(topScores !== null) {
+    for (var i = 0; i < topScores.length; i++) {
+        var createLi = document.createElement("li");
+        createLi.textContent = topScores[i].initials + " " + alllScores[i].score;
+        highScores.appendChild(createLi);
+    }
+};

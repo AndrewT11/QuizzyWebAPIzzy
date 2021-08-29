@@ -136,7 +136,7 @@ function finished() {
         var timeRemaining = secondsLeft;
         var createP2 = documente.createElement("p");
         clearInterval(timeInterval);
-        createP2.textContent = "Final Score: " + timeRemaining;
+        createP2.textContent = "Final Score: " + score;
 
         questionBox.appendChild(createP2);
     }
@@ -174,15 +174,15 @@ function finished() {
         var topScores = localStorage.getItem("topScores");
         //if there are no topScores created yet, a new array is created for the topScores
         if (topScores === null) {
-            allScores = [];
+            topScores = [];
         }
             else {
-                allScores = JSON.parse(topScores);
+                topScores = JSON.parse(topScores);
             }
             //add new high score to high score list
             topScores.push(finalScore);
-            var setScore = JSON.stringify(allScores);
-            localStorage.setItem("allScores", setScore);
+            var setScore = JSON.stringify(topScores);
+            localStorage.setItem("topScores", setScore);
             //Move to highScores page
             window.location.replace("highScores.html")
     })    
