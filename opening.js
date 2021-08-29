@@ -119,7 +119,7 @@ function compare(event) {
 //Gme finished. Questionbox and timer cleared
 function finished() {
     questionBox.innerHTML = "";
-    currenTime.innerHTML = "";
+    currentTime.innerHTML = "";
 
     //announcing game over
     var createH1 = document.createElement("h1");
