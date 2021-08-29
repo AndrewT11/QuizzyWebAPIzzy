@@ -5,7 +5,7 @@ var secondsLeft = 60;
 var penalty = 10;
 var questionIndex = 0;
 
-//declaring variable selectors
+// declaring variable selectors
 var currentTime = document.querySelector("#currentTime");
 var questionBox = document.querySelector("#questionBox");
 var timer = document.querySelector("#timeStart");
@@ -64,24 +64,24 @@ timer.addEventListener("click", function(){
     render(questionIndex);
 });
 
-//Questions and answers rendered on page
+//Clear Data. Questions and answers rendered on page
 function render(questionIndex) {
     questionBox.innerHTML = "";
     CreateUl.innerHTML = "";
 
-    //creating for loop to access array questions
+    //creating for loop to access array questions and answers
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].question;
         var userChoices = questions[questionIndex].choices;
         questionBox.textContent - userQuestion;
         }
     //create ul and li for choices
-    userChoices.forEach(function(newItem) { 
+    userChoices.forEach(function (newItem) { 
         var createLi = document.createElement("li");
         createLi.textContent = newItem;
         questionBox.appendChild(createUl);
         createUl.appendChild(createLi);
-        createLi.addEventListener("click", compare());
+        createLi.addEventListener("click", (compare));
         }
     );
 };   
@@ -108,7 +108,7 @@ function compare(event) {
     // question count vs total questions. stop game or move to next question
     if (questionIndex >= questions.length) {
             finished();
-            createDiv.textContent = "No more." + score + "/" + questions.length + ". See you at the crossroads. So you won't be lonely."
+            createDiv.textContent = score + "/" + questions.length + ". See you at the crossroads. So you won't be lonely."
     } 
         else {
         render(questionIndex);
@@ -121,14 +121,14 @@ function finished() {
     currenTime.innerHTML = "";
 
     //announcing game over
-    var createH1 =document.createElement("h1");
+    var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "Game over!"
 
     questionBox.appendChild(createH1);
     }
-    var createP =document.createElement("p");
-    createH1.setAttribute("id", "createP");
+    var createP = document.createElement("p");
+    createP.setAttribute("id", "createP");
 
     questionBox.appendChild(createP);
 
@@ -156,7 +156,7 @@ function finished() {
     questionBox.appendChild(createInput);
 
     //creating submit button
-    var createButton = document.createElement("submitButton");
+    var createButton = document.createElement("button");
     createButton = setAttribute("id", "submitButton");
     createButton = setAttribute("type", "submit");
     createButton.textContent = "Submit"; 
