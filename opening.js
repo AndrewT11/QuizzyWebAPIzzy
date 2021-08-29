@@ -100,7 +100,7 @@ function compare(event) {
         }   //if answer choice wrong, minus time.
             else {
                 secondsLeft = secondsLeft - penalty;
-                createDiv.textContent = "SMH. SHAKING MY DAMN HEAD."
+                createDiv.textContent = "smh. Wrong."
             }
     }
 
@@ -127,7 +127,7 @@ function finished() {
     createH1.textContent = "Game over!"
 
     questionBox.appendChild(createH1);
-    }
+    
     var finalScoreP = document.createElement("p");
     finalScoreP.setAttribute("id", "finalScoreP");
 
@@ -135,7 +135,7 @@ function finished() {
 
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
-        var createP = documente.createElement("p");
+        var createP = document.createElement("p");
         clearInterval(timeInterval);
         finalScoreP.textContent = "Final Score: " + timeRemaining;
 
