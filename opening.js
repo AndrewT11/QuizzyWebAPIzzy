@@ -104,4 +104,17 @@ function compare(event) {
     }
 
     questionIndex++; //on to next question.
+
+        // question count vs total questions. stop game or move to next question
+        if (questionIndex >= questions.length) {
+                finished();
+                createDiv.textContent = "Quiz iz finished." score + "/" + questions.length + ". See you at the crossroads. So you won't be lonely."
+        } else {
+            render(questionIndex);
+        }
+
+
+
+
+
 }
