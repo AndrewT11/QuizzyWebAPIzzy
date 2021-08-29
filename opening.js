@@ -22,7 +22,7 @@ var questions = [
     {
         question: "The condition in an if / else statement is enclosed within ______.",
         choices: ["quotes", "curly braces", "parentheses", "square brackets"],
-        answer: "brackets"
+        answer: "parentheses"
 
     },
     {
@@ -34,7 +34,7 @@ var questions = [
     {
         question: "String values must be enclosed within ______ when being assigned to variables.",
         choices: ["quotes", "curly braces", "parentheses", "commas"],
-        answer: "parenthesis"
+        answer: "quotes"
 
     },
     {
@@ -114,7 +114,7 @@ function compare(event) {
         else {
         generate(questionIndex);
     }
-        questionBox.appendChild(createDiv);
+    questionBox.appendChild(createDiv);
 
 //Gme finished. Questionbox and timer cleared
 function finished() {
