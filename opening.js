@@ -67,13 +67,13 @@ timer.addEventListener("click", function(){
 //Questions and answers rendered on page
 function render(questionIndex) {
     questionBox.innerHTML = "";
-    ulCreate.innerHTML = "";
+    CreateUl.innerHTML = "";
 
     //creating for loop to access array questions
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].question;
         var userChoices = questions[questionIndex].choices;
-        questionsBox.textContent - userQuestion;
+        questionBox.textContent - userQuestion;
         }
     //create ul and li for choices
     userChoices.forEach(function(newItem) { 
@@ -96,7 +96,7 @@ function compare(event) {
         if(selection.textContent == questions[questionIndex].answer) {
             score++;
             createDiv.textContent = "Letsa Go! You are right!" 
-        }   //if answer choice wrong
+        }   //if answer choice wrong, minus time.
             else {
                 secondsLeft = secondsLeft - penalty;
                 createDiv.textContent = "SMH. SHAKING MY DAMN HEAD."
@@ -113,9 +113,36 @@ function compare(event) {
         else {
         render(questionIndex);
     }
+        questionBox.appendChild(createDiv);
+
+//Gme finished. Questionbox and timer cleared
+function finished() {
+    questionBox.innerHTML = "";
+    currenTime.innerHTML = "";
+
+    //announcing game over
+    var createH1 =document.createElement("h1");
+    createH1.setAttribute("id", "createH1");
+    createH1.textContent = "Game over!"
+
+    questionBox.appendChild(createH1);
+    }
+    var createP =document.createElement("p");
+    createH1.setAttribute("id", "createP");
+
+    questionBox.appendChild(createP);
+
+    if (secondsLeft >= 0) {
+        var timeRemaining = secondsLeft;
+        var createP2 = documente.createElement("p");
+        clearInterval(timeInterval);
+        createP2.textContent = "Final Score: " + score + timeRemaining;
+
+        questionBox.appendChild(createP2);
+    }
+    
+    //Entering initials and submitting high score to high score list.
 
 
 
-
-
-}
+};
