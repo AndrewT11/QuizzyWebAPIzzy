@@ -56,9 +56,15 @@ timer.addEventListener("click", function(){
         
             if (secondsLeft <= 0) {
                 clearInterval(timerInterval);
-                allDone();
+                finished();
                 currentTime.textContent = "Game Over!"
             };
         }, 1000);    
     }
 });
+
+//Questions and answers rendered on page
+function render(questionIndex) {
+    questionsDiv.innerHTML = "";
+    ulCreate.innerHTML = "";
+}
