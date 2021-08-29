@@ -142,6 +142,8 @@ function finished() {
     }
     
     //Entering initials and submitting high score to high score list.
+    
+
 
 
 
