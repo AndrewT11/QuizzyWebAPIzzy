@@ -8,7 +8,7 @@ var question = document.querySelector("#question");
 
 var goBack = ducoment.querySelector("#goBack");
 
-var clearHighScores = document.querySelector("#clearhighScores")
+var clearHighScores = document.querySelector("#clearHighScores")
 
 var highScores = document.querySelector("#highScores");
 

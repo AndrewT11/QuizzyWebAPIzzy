@@ -142,9 +142,21 @@ function finished() {
     }
     
     //Entering initials and submitting high score to high score list.
-    
+    //creating label for input box
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent("Enter initials here: ");
+    questionBox.appendChild(createLabel);
 
+    //creating input box of high scores
+    var createInput = document.createElement("input");
+    createInput = setAttribute("id", "createInput");
+    createInput = setAttribute("type", "text");
+    createInput.textContent = "";
 
+    //creating submit button
+    var createButton = document.createElement("submitButton");
+    createButton = setAttribute("id", "submitButton");
 
 
 };
