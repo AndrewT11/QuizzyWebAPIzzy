@@ -128,16 +128,16 @@ function finished() {
 
     questionBox.appendChild(createH1);
     }
-    var createP = document.createElement("p");
-    createP.setAttribute("id", "createP");
+    var finalScoreP = document.createElement("p");
+    finalScoreP.setAttribute("id", "finalScoreP");
 
-    questionBox.appendChild(createP);
+    questionBox.appendChild(finalScoreP);
 
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP2 = documente.createElement("p");
         clearInterval(timeInterval);
-        createP2.textContent = "Final Score: " + score;
+        finalScoreP.textContent = "Final Score: " + timeRemaining;
 
         questionBox.appendChild(createP2);
     }
