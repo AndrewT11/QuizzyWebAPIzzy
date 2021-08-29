@@ -52,7 +52,7 @@ timer.addEventListener("click", function(){
     if (timerInterval === 0) {
         timerInterval = setInterval(function() {
             secondsLeft--;
-            currentTime.textContent = "Time: + secondsLeft";
+            currentTime.textContent = "Time: "+ secondsLeft;
         
             if (secondsLeft <= 0) {
                 clearInterval(timerInterval);
@@ -65,15 +65,14 @@ timer.addEventListener("click", function(){
 });
 
 //Questions and answers rendered on page
-function render(questionIndex) {
+function render(questionsIndex) {
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
 
     //creating for loop to access array questions
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionsIndex].questions;
-        var userChoices = questions[questionsIndex].choices;
         questionsBox.textContent - userQuestion;
     }
 
-}
+}   
