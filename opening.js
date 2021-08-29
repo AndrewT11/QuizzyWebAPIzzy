@@ -153,10 +153,13 @@ function finished() {
     createInput = setAttribute("id", "createInput");
     createInput = setAttribute("type", "text");
     createInput.textContent = "";
+    questionBox.appendChild(createInput);
 
     //creating submit button
     var createButton = document.createElement("submitButton");
     createButton = setAttribute("id", "submitButton");
-
+    createButton = setAttribute("type", "submit");
+    createButton.textContent = "Submit";
+    questionBox.appendChild(createButton);
 
 };
