@@ -80,13 +80,16 @@ li {
     color: black;
     width: 75%;
     cursor: pointer;
+}
+
+.choicesLi {
+    background-color: var(--button-color);
+    color: white;
     transition: 0.5s ease;
 }
-
-li:hover {
+.choicesLi:hover {
     box-shadow: 0 0 10px 2px rgb(145, 30, 199);
 }
-
 /* createUl li {
     background-color: var(--button-color);
     margin-top: 12px;

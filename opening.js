@@ -74,6 +74,7 @@ function generate(questionIndex) {
     }
     userChoices.forEach(function (newItem) {
         var createLi = document.createElement("li");
+        createLi.setAttribute("class", "choicesLi")
         createLi.textContent = newItem;
         
         questionBox.appendChild(createUl);
