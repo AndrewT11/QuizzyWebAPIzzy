@@ -4,7 +4,7 @@
 
 #container {
     position: absolute;
-    left: 30%;
+    left: 20%;
     top: 20%;
     width: 500px;
     height: 500px;
@@ -77,6 +77,15 @@ li {
     width: 75%;
 }
 
+createUl li {
+    background-color: var(--button-color);
+    margin-top: 12px;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: black;
+    width: 75%;
+}
+
 #createButton {
     background-color: var(--button-color);
     margin-left: 33%;
@@ -98,6 +107,57 @@ input {
     margin-bottom: 20px;
     width: 50%;
     border: 1px solid lightgray;
+
+}
+/* Start media queries */
+/* A Media Query max-width: 786px */
+@media screen and (max-width: 786px) {
+    /* Resized content to fit 786px  */
+    body {
+        max-width: 786px;
+    }
+    /* Resized main-content to fit 786px  */
+    #container {
+    position: absolute;
+    left: 20%;
+    }
+    
+    a {
+    margin-left: 20%;
+    }
+    #goBack {
+        
+        position: relative;
+        left: 55%;
+    }
+    
+    #clearHighScores {
+        
+        position: relative;
+        right: 5%;
+        
+    }
+    }
+    
+    /* A Media Query max-width: 640px */
+    @media screen and (max-width: 640px) {
+    /* Resized content to fit 640px  */
+    body {
+        min-width: 640px;
+    }
+    /* Resized main-content to fit 640px  */
+    #container {
+    position: absolute;
+    left: 10%;
+    }
+    a {
+      margin-left: 10%;
+    }
+    
+    
+    }
+
+
 
 /* :root {
     --outer-space: #33393f;

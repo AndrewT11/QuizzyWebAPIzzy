@@ -75,6 +75,7 @@ function generate(questionIndex) {
     userChoices.forEach(function (newItem) {
         var createLi = document.createElement("li");
         createLi.textContent = newItem;
+        
         questionBox.appendChild(createUl);
         createUl.appendChild(createLi);
         createLi.addEventListener("click", (compare));
@@ -184,7 +185,7 @@ function finish() {
             topScores.push(finalScore);
             var newScore = JSON.stringify(topScores);
             localStorage.setItem("topScores", newScore);
-            window.location.replace("highScores.html");
+            window.location.replace("assets/highScores.html");
         }
     });
 

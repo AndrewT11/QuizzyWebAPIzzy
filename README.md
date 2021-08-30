@@ -2,9 +2,7 @@
 
 **Version 1.0**
 
-Quiz Show Project
-
-## Task
+Quiz Game Project
 
 
 ## Note 
@@ -39,7 +37,7 @@ THEN I can save my initials and my score
 
 
 ## Screenshot
-![Text describing image here](imagehere)
+![Quiz Demo](assets\quizvideo.gif)
 
 
 ## Links
@@ -47,7 +45,7 @@ THEN I can save my initials and my score
 * [Code Repository Link](https://github.com/AndrewT11/QuizzyWebAPIzzy)
 
 ## Credits
-Andrew Tran
+Marie Morris
 
 ### Resources
 
