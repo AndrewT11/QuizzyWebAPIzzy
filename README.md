@@ -37,7 +37,7 @@ THEN I can save my initials and my score
 
 
 ## Screenshot
-![Quiz Demo](Assets\quizvideo.gif)
+![Quiz Demo](Assets\quizgamedemo.gif)
 
 
 ## Links
