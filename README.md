@@ -1,6 +1,6 @@
 # QuizzyWebAPIzzy
 
-**Version 1.0**
+**Version 3.0**
 
 Quiz Game Project
 
