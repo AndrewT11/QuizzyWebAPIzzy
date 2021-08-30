@@ -34,3 +34,4 @@ if(topScores !== null) {
 
 // //code for sorting by number in an array
 // .sort(function(a, b){return b-a});
+//add classes to added li tomorrow morning. or add to Ul somehow. Need to change list type to numbered.
