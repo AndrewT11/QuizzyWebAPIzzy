@@ -11,16 +11,18 @@
     margin-left: 33%;
     padding: 15px 30px;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #questionBox {
     margin: 20px;
+    margin-top: 50px;
     
 }
 
 #currentTime {
     float: right;
+    padding: 20px;
 }
 
 #clearHighScores {
@@ -55,6 +57,15 @@ h1 {
 
 button {
     border-radius: 5px;
+}
+
+li {
+    background-color: rgb(114, 73, 114);
+    margin-top: 12px;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: white;
+    width: 75%;
 }
 
 #submit {

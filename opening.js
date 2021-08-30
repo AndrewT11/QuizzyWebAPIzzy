@@ -1,14 +1,13 @@
-//declaring variables
-
+//declaring variables and var selectors
 var score = 0;
-var secondsLeft = 60;
+var secondsLeft = 70;
+var timerInterval = 0;
 var penalty = 10;
 var questionIndex = 0;
-
-// declaring variable selectors
 var currentTime = document.querySelector("#currentTime");
-var questionBox = document.querySelector("#questionBox");
 var timer = document.querySelector("#timeStart");
+var questionBox = document.querySelector("#questionBox");
+var createUl = document.createElement("ul");
 
 //creating questions array
 //Question Array to be populated
@@ -45,79 +44,75 @@ var questions = [
     }
 ];
 
-var createUl = document.createElement("ul"); //creates ul for questions
-
-var timerInterval = 0;
 //Timer will start and display time.
-timer.addEventListener("click", function(){ 
+timer.addEventListener("click", function () {
     if (timerInterval === 0) {
-        timerInterval = setInterval(function() {
+        timerInterval = setInterval(function () {
             secondsLeft--;
-            currentTime.textContent = "Time: "+ secondsLeft;
+            currentTime.textContent = "Time: " + secondsLeft;
             //when time is up, game is done.
             if (secondsLeft <= 0) {
                 clearInterval(timerInterval);
-                finished();
-                currentTime.textContent = "Game Over!"
-            };
-        }, 1000);    
-    };
+                finish();
+                currentTime.textContent = "Time out";
+            }
+        }, 1000);
+    }
     generate(questionIndex);
 });
 
 //Clear Data. Questions and answers generated on page
+     //creating for loop to access array questions and answers
+        //create ul and li for choices
 function generate(questionIndex) {
     questionBox.innerHTML = "";
     createUl.innerHTML = "";
-
-    //creating for loop to access array questions and answers
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].question;
         var userChoices = questions[questionIndex].choices;
         questionBox.textContent = userQuestion;
-        }
-    //create ul and li for choices
-    userChoices.forEach(function (newItem) { 
+    }
+    userChoices.forEach(function (newItem) {
         var createLi = document.createElement("li");
         createLi.textContent = newItem;
         questionBox.appendChild(createUl);
         createUl.appendChild(createLi);
         createLi.addEventListener("click", (compare));
-        }
-    );
-};   
-
+    });
+};
+//begin comparing answers by creating 
 function compare(event) {
     var selection = event.target;
 
     if (selection.matches("li")) {
+
         var createDiv = document.createElement("div");
-        createDiv.setAttribute("id", "createDiv");
-            //if answer choice correct
-        if(selection.textContent == questions[questionIndex].answer) {
+        createDiv.setAttribute("id", "createDiv"); 
+        if (selection.textContent == questions[questionIndex].answer) {
             score++;
-            createDiv.textContent = "Letsa Go! You are right!" 
-        }   //if answer choice wrong, minus time.
+            createDiv.textContent = "Correct! Answer:  " + questions[questionIndex].answer;
+        } 
             else {
-                secondsLeft = secondsLeft - penalty;
-                createDiv.textContent = "smh. Wrong."
-            }
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "Incorrect. Correct Answer:  " + questions[questionIndex].answer;
+        }
+
     }
 
     questionIndex++; //on to next question.
 
     // question count vs total questions. stop game or move to next question
     if (questionIndex >= questions.length) {
-            finished();
+            finish();
             createDiv.textContent = score + "/" + questions.length + ". See you at the crossroads. So you won't be lonely."
-    } 
+    }   
         else {
         generate(questionIndex);
     }
     questionBox.appendChild(createDiv);
 };
-//Gme finished. Questionbox and timer cleared
-function finished() {
+//Gme finish. Questionbox and timer cleared
+function finish() {
     questionBox.innerHTML = "";
     currentTime.innerHTML = "";
 
@@ -137,7 +132,7 @@ function finished() {
         var timeRemaining = secondsLeft;
         var createP = document.createElement("p");
         clearInterval(timeInterval);
-        finalScoreP.textContent = "Final Score: " + timeRemaining;
+        createP.textContent = "Final Score: " + timeRemaining;
 
         questionBox.appendChild(createP);
     }
