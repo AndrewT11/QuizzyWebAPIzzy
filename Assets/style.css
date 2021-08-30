@@ -79,6 +79,7 @@ li {
     font-size: 18px;
     color: black;
     width: 75%;
+    cursor: pointer;
 }
 
 /* createUl li {
