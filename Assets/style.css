@@ -67,24 +67,28 @@ h1 {
 button {
     border-radius: 5px;
 }
+ul {
+    list-style: none;
+    
+}
 
 li {
     background-color: rgba(166, 83, 204, 0.233);
     margin-top: 12px;
-    padding: 5px 10px;
+    padding: 5px;
     font-size: 18px;
     color: black;
     width: 75%;
 }
 
-createUl li {
+/* createUl li {
     background-color: var(--button-color);
     margin-top: 12px;
     padding: 5px 10px;
     font-size: 18px;
     color: black;
     width: 75%;
-}
+} */
 
 #createButton {
     background-color: var(--button-color);
