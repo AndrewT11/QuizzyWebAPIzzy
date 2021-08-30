@@ -67,6 +67,20 @@ h1 {
 button {
     border-radius: 5px;
 }
+
+#questionBox {
+    /* font-size: 30px; */
+}
+
+
+.title {
+    font-size: 40px;
+}
+
+.titleText {
+    font-size: 20px;
+}
+
 ul {
     list-style: none;
     
