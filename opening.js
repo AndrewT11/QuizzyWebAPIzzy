@@ -101,7 +101,7 @@ function compare(event) {
 
     questionIndex++; //on to next question.
 
-    // question count vs total questions. stop game or move to next question
+// question count vs total questions. stop game or move to next question
     if (questionIndex >= questions.length) {
         finish();
         createDiv.textContent =  score + "/" + questions.length + " were correct";
@@ -117,7 +117,7 @@ function finish() {
     questionBox.innerHTML = "";
     currentTime.innerHTML = "";
 
-    //announcing game over
+//announcing game over
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "Game over!"
@@ -138,25 +138,27 @@ function finish() {
         questionBox.appendChild(createP);
     }
 
-    //Entering initials and submitting high score to high score list.
-    //creating label for input box
-    var createLabel = document.createElement("label");
-    createLabel.setAttribute("id", "createLabel");
-    createLabel.textContent("Enter initials here: ");
-    questionBox.appendChild(createLabel);
+//Entering initials and submitting high score to high score list.
+//creating label for input box
+    var CreateLabel = document.createElement("label");
+    CreateLabel.setAttribute("id", "createLabel");
+    CreateLabel.textContent = "Enter your initials: ";
 
     //creating input box of high scores
+    questionBox.appendChild(CreateLabel);
     var createInput = document.createElement("input");
-    createInput = setAttribute("id", "createInput");
-    createInput = setAttribute("type", "text");
+    createInput.setAttribute("type", "text");
+    createInput.setAttribute("id", "initials");
     createInput.textContent = "";
+
     questionBox.appendChild(createInput);
 
     //creating submit button
     var createButton = document.createElement("button");
-    createButton = setAttribute("id", "submitButton");
-    createButton = setAttribute("type", "submit");
-    createButton.textContent = "Submit"; 
+    createButton.setAttribute("type", "submit");
+    createButton.setAttribute("id", "createButton");
+    createButton.textContent = "Submit";
+
     questionBox.appendChild(createButton);
 
     //creating Event for button push
