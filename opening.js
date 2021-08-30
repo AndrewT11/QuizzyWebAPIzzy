@@ -162,27 +162,30 @@ function finish() {
     questionBox.appendChild(createButton);
 
     //creating Event for button push
-    createButton.addEventListener("click", function() {
+    createButton.addEventListener("click", function () {
         var initials = createInput.value;
 
-        var finalScore = {
-            initials: initials,
-            score:  timeRemaining
-        };
-        // storing and retrieving topScores from localStorage. Place into highScores.html 
-        var topScores = localStorage.getItem("topScores");
-        //if there are no topScores created yet, a new array is created for the topScores
-        if (topScores === null) {
-            topScores = [];
-        }
-            else {
+        if (initials === null) {
+
+            console.log("No value entered!");
+
+        } else {
+            var finalScore = {
+                initials: initials,
+                score: timeRemaining
+            }
+            console.log(finalScore);
+            var topScores = localStorage.getItem("topScores");
+            if (topScores === null) {
+                topScores = [];
+            } else {
                 topScores = JSON.parse(topScores);
             }
-            //add new high score to high score list
             topScores.push(finalScore);
-            var setScore = JSON.stringify(topScores);
-            localStorage.setItem("topScores", setScore);
-            //Move to highScores page
+            var newScore = JSON.stringify(topScores);
+            localStorage.setItem("topScores", newScore);
             window.location.replace("highScores.html");
-    });    
-};
+        }
+    });
+
+}
