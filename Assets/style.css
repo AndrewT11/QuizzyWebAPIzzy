@@ -1,3 +1,7 @@
+:root {
+    --button-color: rgb(80, 36, 80);
+}
+
 #container {
     position: absolute;
     left: 30%;
@@ -7,7 +11,7 @@
 } 
 
 #timeStart {
-    background-color: rgb(114, 73, 114);
+    background-color: var(--button-color);
     margin-left: 33%;
     padding: 15px 30px;
     color: white;
@@ -27,7 +31,7 @@
 
 #clearHighScores {
     position: relative;
-    background-color: rgb(114, 73, 114);
+    background-color: var(--button-color);
     color: white;
     text-align: center;
     padding: 10px;
@@ -37,7 +41,7 @@
 }
 
 #goBack {
-    background-color: rgb(114, 73, 114);
+    background-color: var(--button-color);
     position: relative;
     padding: 10px;
     top: 30%;
@@ -51,6 +55,11 @@
     
 }
 
+textarea {
+    width: 90%;
+    margin: 20px;
+}
+
 h1 {
     text-align: center;
 }
@@ -60,16 +69,16 @@ button {
 }
 
 li {
-    background-color: rgb(114, 73, 114);
+    background-color: rgba(166, 83, 204, 0.233);
     margin-top: 12px;
     padding: 5px 10px;
     font-size: 18px;
-    color: white;
+    color: black;
     width: 75%;
 }
 
-#submit {
-    background-color: rgb(114, 73, 114);
+#createButton {
+    background-color: var(--button-color);
     margin-left: 33%;
     padding: 15px 30px;
     font-size: 20px;
@@ -80,3 +89,20 @@ li {
     margin-top: 20px;
     border-top: 2px solid black;
 }
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid lightgray;
+
+/* :root {
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+  }
+::selection {
+    background-color: var(--button-color);
+    color: var(--outer-space); */
