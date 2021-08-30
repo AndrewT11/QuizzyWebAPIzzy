@@ -27,5 +27,10 @@ if(topScores !== null) {
         var createLi = document.createElement("li");
         createLi.textContent = topScores[i].initials + " " + topScores[i].score;
         highScores.appendChild(createLi);
+        
     }
 };
+
+
+// //code for sorting by number in an array
+// .sort(function(a, b){return b-a});

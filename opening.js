@@ -1,6 +1,6 @@
 //declaring variables and var selectors
 var score = 0;
-var secondsLeft = 70;
+var secondsLeft = 60;
 var timerInterval = 0;
 var penalty = 10;
 var questionIndex = 0;
