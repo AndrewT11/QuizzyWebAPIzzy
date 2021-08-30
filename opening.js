@@ -103,15 +103,16 @@ function compare(event) {
 
     // question count vs total questions. stop game or move to next question
     if (questionIndex >= questions.length) {
-            finish();
-            createDiv.textContent = score + "/" + questions.length + ". See you at the crossroads. So you won't be lonely."
-    }   
+        finish();
+        createDiv.textContent =  score + "/" + questions.length + " were correct";
+    } 
         else {
         generate(questionIndex);
     }
     questionBox.appendChild(createDiv);
+
 };
-//Gme finish. Questionbox and timer cleared
+//Game finish. Questionbox and timer cleared
 function finish() {
     questionBox.innerHTML = "";
     currentTime.innerHTML = "";
@@ -131,8 +132,8 @@ function finish() {
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP = document.createElement("p");
-        clearInterval(timeInterval);
-        createP.textContent = "Final Score: " + timeRemaining;
+        clearInterval(timerInterval);
+        finalScoreP.textContent = "Your final score is: " + timeRemaining;
 
         questionBox.appendChild(createP);
     }
