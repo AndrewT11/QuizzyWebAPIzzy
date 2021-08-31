@@ -145,9 +145,9 @@ function finish() {
     var CreateLabel = document.createElement("label");
     CreateLabel.setAttribute("id", "createLabel");
     CreateLabel.textContent = "Enter your initials: ";
+    questionBox.appendChild(CreateLabel);
 
     //creating input box of high scores
-    questionBox.appendChild(CreateLabel);
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -169,14 +169,14 @@ function finish() {
 
         if (initials === null) {
 
-            console.log("No value entered!");
+            // alert("No value entered!");
 
         } else {
             var finalScore = {
                 initials: initials,
                 score: timeRemaining
             }
-            console.log(finalScore);
+            // console.log(finalScore);
             var topScores = localStorage.getItem("topScores");
             if (topScores === null) {
                 topScores = [];
