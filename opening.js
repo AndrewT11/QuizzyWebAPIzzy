@@ -138,10 +138,10 @@ function finish() {
 
 //Entering initials and submitting high score to high score list.
 //creating label for input box
-    var CreateLabel = document.createElement("label");
-    CreateLabel.setAttribute("id", "createLabel");
-    CreateLabel.textContent = "Enter your initials: ";
-    questionBox.appendChild(CreateLabel);
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter your initials: ";
+    questionBox.appendChild(createLabel);
 
     //creating input box of high scores
     var createInput = document.createElement("input");
