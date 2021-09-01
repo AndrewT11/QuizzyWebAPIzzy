@@ -126,16 +126,12 @@ function finish() {
 
     questionBox.appendChild(createH1);
 
-    var finalScoreP = document.createElement("p");
-    finalScoreP.setAttribute("id", "finalScoreP");
-
-    questionBox.appendChild(finalScoreP);
 
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP = document.createElement("p");
         clearInterval(timerInterval);
-        finalScoreP.textContent = "Your final score is: " + timeRemaining;
+        createP.textContent = "Your final score is: " + timeRemaining;
 
         questionBox.appendChild(createP);
     }
